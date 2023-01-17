@@ -46,6 +46,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   children: [
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.1,
+                      child: Image.asset('assets/images/chicken_logo2.png'),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
