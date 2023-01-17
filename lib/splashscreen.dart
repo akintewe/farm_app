@@ -1,5 +1,5 @@
-
 import 'package:farm_app/homepage.dart';
+import 'package:farm_app/signup_signin.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -24,7 +24,7 @@ class _SplashSreenState extends State<SplashSreen> {
     // Navigator.pushReplacement(
     //     context, MaterialPageRoute(builder: (context) => IntroPage()));
     Get.to(
-      HomePage(),
+      LoginSignupMenu(),
       transition: Transition.fadeIn,
       duration: Duration(seconds: 2),
     );

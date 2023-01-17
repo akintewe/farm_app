@@ -1,3 +1,4 @@
+import 'package:farm_app/about.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -55,50 +56,59 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 70,
               ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    'assets/images/home.png',
-                    width: 45,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'Home',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
-                  )
-                ],
+              GestureDetector(
+                onTap: () {},
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Image.asset(
+                      'assets/images/home.png',
+                      width: 45,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'Home',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Image.asset(
-                    'assets/images/about.png',
-                    width: 45,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'About Us',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
-                  )
-                ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: ((context) => AboutScreen())));
+                },
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Image.asset(
+                      'assets/images/about.png',
+                      width: 45,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'About Us',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
               ),
               SizedBox(
                 height: 20,
@@ -183,27 +193,9 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'Landmark',
-                    style: TextStyle(
-                        color: Color.fromRGBO(204, 234, 105, 1),
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'University',
-                    style: TextStyle(
-                        color: Color.fromRGBO(204, 234, 105, 1),
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold),
+                  Image.asset(
+                    'assets/images/chicken_logo2.png',
+                    width: 150,
                   )
                 ],
               ),
@@ -250,7 +242,7 @@ class _HomePageState extends State<HomePage> {
                       height: 20,
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(10.0),
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
@@ -485,7 +477,7 @@ class _HomePageState extends State<HomePage> {
                             height: 30,
                           ),
                           Text(
-                            'Homemade Jams',
+                            'Layer Breeds',
                             style: TextStyle(
                                 color: Color.fromRGBO(204, 234, 105, 1),
                                 fontSize: 17),
@@ -497,10 +489,112 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                '  Pick up your Homemade Jams from\nLandmark University. We have been told by\n   many of our customers that they simply\n  love our Homemade Jams, and we can’t\n                      say we blame them.\n                       That’s because\neverything we grow at Landmark University\nis grown with love, so our food looks better,\nsmells better, and tastes better. Try it out\n                                yourself.',
+                                '           Pick up your Layer breeds from\nLandmark University. We have been told by\n   many of our customers that they simply\n  love our Homemade Jams, and we can’t\n                      say we blame them.\n                       That’s because\neverything we grow at Landmark University\nis grown with love, so our food looks better,\nsmells better, and tastes better. Try it out\n                                yourself.',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.3,
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            child: Image.asset(
+                              'assets/images/poultry.jpeg',
+                              fit: BoxFit.fill,
+                            ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20)),
+                          )
+                        ],
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          'Products You\'ll love',
+                          style: TextStyle(
+                              color: Color.fromRGBO(204, 234, 105, 1),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Broiler Breeds',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '          Pick up your Broiler breeds from\nLandmark University. We have been told by\n   many of our customers that they simply\n  love our Homemade Jams, and we can’t\n                      say we blame them.\n                       That’s because\neverything we grow at Landmark University\nis grown with love, so our food looks better,\nsmells better, and tastes better. Try it out\n                                yourself.',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.3,
+                          width: MediaQuery.of(context).size.width * 0.8,
+                          child: Image.asset(
+                            'assets/images/poultry.jpeg',
+                            fit: BoxFit.fill,
+                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20)),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.9,
+                      width: MediaQuery.of(context).size.width * 1,
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            'Cockerel Breeds',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                '          Pick up your Cockerel breeds from\nLandmark University. We have been told by\n   many of our customers that they simply\n  love our Homemade Jams, and we can’t\n                      say we blame them.\n                       That’s because\neverything we grow at Landmark University\nis grown with love, so our food looks better,\nsmells better, and tastes better. Try it out\n                                yourself.',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500),
                               ),
                             ],
                           ),
