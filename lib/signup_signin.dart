@@ -1,4 +1,5 @@
 import 'package:farm_app/homepage.dart';
+import 'package:farm_app/loginpage.dart';
 import 'package:flutter/material.dart';
 
 class LoginSignupMenu extends StatefulWidget {
@@ -87,7 +88,7 @@ class _LoginSignupMenuState extends State<LoginSignupMenu> {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomePage()));
+                        MaterialPageRoute(builder: (context) => Loginpage()));
                   },
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.09,
